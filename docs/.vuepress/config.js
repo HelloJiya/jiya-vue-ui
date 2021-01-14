@@ -1,7 +1,7 @@
 module.exports = {
   "title": "ZD-UI",
   "description": "A Component Library for Vue.js.",
-  "port": "8085",
+  "port": "6001",
   "plugins": [
     "demo-container"
   ],

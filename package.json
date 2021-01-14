@@ -4,18 +4,18 @@
   "private": false,
   "description": "A Component Library for Vue.js.",
   "scripts": {
-    "lint": "vue-cli-service lint src/* packages/* tests/*",
-    "deploy": "gh-pages -d docs/.vuepress/dist",
     "bootstrap": "yarn || npm i",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "docs:build": "vuepress build docs",
+    "deploy:build": "npm run docs:build && npm run deploy",
     "build:file": "node script/build-entry.js",
     "build:theme": "node script/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
-    "clean": "rimraf lib && rimraf packages/*/lib && rimraf tests/**/coverage",
-    "deploy:build": "npm run docs:build && npm run deploy",
-    "dev": "npm run bootstrap && vuepress dev docs",
+    "dev": "vuepress dev docs",
     "dist": "npm run clean && npm run build:file && npm run lint && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js  && npm run build:theme ",
-    "docs:build": "vuepress build docs",
-    "pub": "npm publish",
-    "test": "npm run lint && npm run build:theme && npm run build:file && cross-env CI_ENV=/dev/ BABEL_ENV=test karma start tests/unit/karma.conf.js --single-run"
+    "clean": "rimraf lib && rimraf packages/*/lib && rimraf tests/**/coverage",
+    "lint": "vue-cli-service lint src/* packages/**/* tests/**/*",
+    "test": "npm run lint && npm run build:theme && npm run build:file && cross-env CI_ENV=/dev/ BABEL_ENV=test karma start tests/unit/karma.conf.js --single-run",
+    "pub": "npm publish"
   },
   "main": "lib/zd-ui-vue.common.js",
   "files": [
@@ -76,6 +76,7 @@
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.8.0",
     "vuepress-plugin-demo-container": "^0.2.0",
+    "watchpack": "^2.1.0",
     "webpack-cli": "^4.3.1",
     "webpack-node-externals": "^2.5.2"
   },
