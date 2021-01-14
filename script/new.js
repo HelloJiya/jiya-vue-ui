@@ -45,7 +45,7 @@ export default {
 </script>`
   }, {
     filename: path.join('../../docs/components/basic', `${componentname}.md`),
-    content: `## ${ComponentName} ${chineseName}`
+    content: `# ${ComponentName} ${chineseName}`
   },
   {
     filename: path.join('../../packages/theme-chalk/src', `${componentname}.scss`),
@@ -62,25 +62,25 @@ export default {
 /** ${ComponentName} Component */
 export declare class Zd${ComponentName} extends ZdUIComponent {
 }`
+  },
+  {
+    filename: path.join('../../tests/unit/specs', `${componentname}.spec.js`),
+    content: `import { createTest, destroyVM } from '../util';
+  import ${ComponentName} from 'packages/${componentname}';
+
+  describe('${ComponentName}', () => {
+    let vm;
+    afterEach(() => {
+      destroyVM(vm);
+    });
+
+  it('create', () => {
+    vm = createTest(${ComponentName}, true);
+    expect(vm.$el).to.exist;
+  });
+});
+    `
   }
-  //   {
-  //     filename: path.join('../../tests/unit/specs', `${componentname}.spec.js`),
-  //     content: `import { createTest, destroyVM } from '../util';
-  // import ${ComponentName} from 'packages/${componentname}';
-
-  // describe('${ComponentName}', () => {
-  //   let vm;
-  //   afterEach(() => {
-  //     destroyVM(vm);
-  //   });
-
-//   it('create', () => {
-//     vm = createTest(${ComponentName}, true);
-//     expect(vm.$el).to.exist;
-//   });
-// });
-//     `
-//   }
 ]
 
 // 添加到 components.json

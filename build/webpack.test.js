@@ -4,34 +4,23 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const config = require('./config')
 
-module.exports = {
-  mode: 'production',
+const webpackConfig = {
+  mode: 'development',
   entry: {
     app: ['./src/index.js']
   },
   output: {
-    path: path.resolve(process.cwd(), './lib'),
-    publicPath: '/lib/',
-    filename: 'zd-ui-vue.common.js',
-    chunkFilename: '[id].js',
-    libraryExport: 'default',
-    library: 'ZD',
-    libraryTarget: 'commonjs2'
+    path: path.resolve(process.cwd(), './dist'),
+    publicPath: '/dist/',
+    filename: '[name].js',
+    chunkFilename: '[id].js'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    alias: config.alias,
+    alias: Object.assign(config.alias, {
+      vue$: 'vue/dist/vue.common.js'
+    }),
     modules: ['node_modules']
-  },
-  externals: config.externals,
-  performance: {
-    hints: false
-  },
-  stats: {
-    children: false
-  },
-  optimization: {
-    minimize: false
   },
   module: {
     rules: [
@@ -65,7 +54,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new ProgressBarPlugin(),
     new VueLoaderPlugin()
   ]
 }
+
+if (!process.env.CI_ENV) {
+  webpackConfig.plugins.push(
+    new ProgressBarPlugin()
+  )
+}
+
+module.exports = webpackConfig

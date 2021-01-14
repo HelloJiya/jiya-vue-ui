@@ -9,15 +9,16 @@ Object.keys(Components).forEach(function (key) {
 })
 
 externals = [Object.assign({
-  vue: 'vue'
+  vue: 'vue',
+  'element-ui': 'element-ui'
 }, externals), nodeExternals()]
 
 exports.externals = externals
 
 exports.alias = {
-  main: path.resolve(__dirname, './src'),
-  packages: path.resolve(__dirname, './packages'),
-  'zd-ui': path.resolve(__dirname, './')
+  main: path.resolve(__dirname, '../src'),
+  packages: path.resolve(__dirname, '../packages'),
+  'zd-ui': path.resolve(__dirname, '../')
 }
 
 exports.vue = {
