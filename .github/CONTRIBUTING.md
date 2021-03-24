@@ -9,29 +9,28 @@
 
 - 执行 `npm run dist` 后可以正确打包文件。
 
-- 提交 PR 前请 rebase，确保 commit 记录的整洁。
+- 提交 MR 前请 rebase，确保 commit 记录的整洁。
 
-- 确保 PR 是提交到 `dev` 分支，而不是 `master` 分支。
+- 确保 MR 是提交到 `dev` 分支，而不是 `main` 分支。
 
-- 如果是修复 bug，请在 PR 中给出描述信息。
+- 如果是修复 bug，请在 MR 中给出描述信息。
 
 ## 开发环境搭建
 ```shell
 git clone ssh://git@192.168.0.200:10022/web-h5/npm-libs/ics-ui.git
 
 git checkout -b feat_<name>
+#安装依赖
+npm run bootstrap 
+#打包代码
+npm run dist
+#启动服务
 npm run dev
 
 ```
 
-打包代码：
-
-```shell
-npm run dist
-```
-
 ## 组件开发规范
-- 通过 `make new` 创建组件目录结构，包含测试代码、入口文件、文档
+- 通过 `make new [组件名]` 创建组件目录结构，包含测试代码、入口文件、文档
 <!-- - 如果包含父子组件，需要更改目录结构，参考 `Button` -->
 <!-- - 组件内如果依赖了其他组件，需要在当前组件内引入，参考 `Select` -->
 
