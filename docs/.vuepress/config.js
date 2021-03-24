@@ -1,5 +1,5 @@
 module.exports = {
-  "title": "ZD-UI",
+  "title": "ICS-UI",
   "description": "A Component Library for Vue.js.",
   "port": "6001",
   "plugins": [

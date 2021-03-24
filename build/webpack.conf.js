@@ -16,7 +16,7 @@ module.exports = {
     chunkFilename: '[id].js',
     libraryTarget: 'umd',
     libraryExport: 'default',
-    library: 'ZD',
+    library: 'ICS',
     umdNamedDefine: true,
     globalObject: 'typeof self !== \'undefined\' ? self : this'
   },

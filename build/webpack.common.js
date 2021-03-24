@@ -12,10 +12,10 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), './lib'),
     publicPath: '/lib/',
-    filename: 'zd-ui-vue.common.js',
+    filename: 'ics-ui.common.js',
     chunkFilename: '[id].js',
     libraryExport: 'default',
-    library: 'ZD',
+    library: 'ICS',
     libraryTarget: 'commonjs2'
   },
   resolve: {

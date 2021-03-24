@@ -5,7 +5,7 @@ var Components = require('../components.json')
 var externals = {}
 
 Object.keys(Components).forEach(function (key) {
-  externals[`zd-ui/packages/${key}`] = `zd-ui/lib/${key}`
+  externals[`ics-ui/packages/${key}`] = `ics-ui/lib/${key}`
 })
 
 externals = [Object.assign({
@@ -18,7 +18,7 @@ exports.externals = externals
 exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../packages'),
-  'zd-ui': path.resolve(__dirname, '../')
+  'ics-ui': path.resolve(__dirname, '../')
 }
 
 exports.vue = {

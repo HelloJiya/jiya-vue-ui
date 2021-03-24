@@ -17,7 +17,7 @@
 
 ## 开发环境搭建
 ```shell
-git clone ssh://git@192.168.0.200:10022/web-h5/npm-libs/zd-ui-vue.git
+git clone ssh://git@192.168.0.200:10022/web-h5/npm-libs/ics-ui.git
 
 git checkout -b feat_<name>
 npm run dev

@@ -1,8 +1,8 @@
-// import ZdUI from '../../src/index.js'
+// import IcsUI from '../../src/index.js'
 // import "../../packages/theme-chalk/src/index.scss"
 import Element from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
-import ZdUI from '../../lib/index'
+import IcsUI from '../../lib/index'
 import '../../lib/theme-chalk/index.css'
 
 export default ({
@@ -10,6 +10,6 @@ export default ({
   options,
   router
 }) => {
-  Vue.use(ZdUI)
+  Vue.use(IcsUI)
   Vue.use(Element)
 }

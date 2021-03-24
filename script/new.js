@@ -35,12 +35,12 @@ export default ${ComponentName}`
   }, {
     filename: 'src/main.vue',
     content: `<template>
-    <div class="zd-${componentname}"> </div>
+    <div class="ics-${componentname}"> </div>
 </template>
 
 <script>
 export default {
-  name: 'Zd${ComponentName}'
+  name: 'Ics${ComponentName}'
 }
 </script>`
   }, {
@@ -57,10 +57,10 @@ export default {
   },
   {
     filename: path.join('../../types', `${componentname}.d.ts`),
-    content: `import { ZdUIComponent } from './component'
+    content: `import { IcsUIComponent } from './component'
 
 /** ${ComponentName} Component */
-export declare class Zd${ComponentName} extends ZdUIComponent {
+export declare class Ics${ComponentName} extends IcsUIComponent {
 }`
   },
   {
@@ -102,15 +102,15 @@ fileSave(sassPath)
   .write(sassImportText, 'utf8')
   .end('\n')
 
-// 添加到 zd-ui.d.ts
-const elementTsPath = path.join(__dirname, '../types/zd-ui.d.ts')
+// 添加到 ics-ui.d.ts
+const elementTsPath = path.join(__dirname, '../types/ics-ui.d.ts')
 
 let elementTsText = `${fs.readFileSync(elementTsPath)}
 /** ${ComponentName} Component */
-export class ${ComponentName} extends Zd${ComponentName} {}`
+export class ${ComponentName} extends Ics${ComponentName} {}`
 
 const index = elementTsText.indexOf('export') - 1
-const importString = `import { Zd${ComponentName} } from './${componentname}'`
+const importString = `import { Ics${ComponentName} } from './${componentname}'`
 
 elementTsText = elementTsText.slice(0, index) + importString + '\n' + elementTsText.slice(index)
 

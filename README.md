@@ -1,4 +1,4 @@
-# zd-ui-vue
+# ics-ui
 
 ## Project setup
 ```

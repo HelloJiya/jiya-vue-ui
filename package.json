@@ -1,5 +1,5 @@
 {
-  "name": "zd-ui-vue",
+  "name": "ics-ui",
   "version": "0.1.0",
   "private": false,
   "description": "A Component Library for Vue.js.",
@@ -18,7 +18,7 @@
     "pub": "npm publish",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0"
   },
-  "main": "lib/zd-ui-vue.common.js",
+  "main": "lib/ics-ui.common.js",
   "files": [
     "lib",
     "src",

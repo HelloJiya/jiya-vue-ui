@@ -1,5 +1,5 @@
-import { ZdUIComponent } from './component'
+import { IcsUIComponent } from './component'
 
 /** Demo Component */
-export declare class ZdDemo extends ZdUIComponent {
+export declare class IcsDemo extends IcsUIComponent {
 }

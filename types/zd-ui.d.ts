@@ -1,30 +1,30 @@
 import Vue from 'vue'
-import { ZdUIComponent, ZdUIComponentSize, ZdUIHorizontalAlignment } from './component'
-import { ZdDemo } from './demo'
+import { IcsUIComponent, IcsUIComponentSize, IcsUIHorizontalAlignment } from './component'
+import { IcsDemo } from './demo'
 
 export interface InstallationOptions {
   size: string
 }
 
-/** The version of zd-ui */
+/** The version of ics-ui */
 export const version: string
 
 /**
- * Install all zd-ui components into Vue.
+ * Install all ics-ui components into Vue.
  * Please do not invoke this method directly.
- * Call `Vue.use(ZdUI)` to install.
+ * Call `Vue.use(IcsUI)` to install.
  */
 export function install (vue: typeof Vue, options: InstallationOptions): void
 
 /** ElementUI component common definition */
-export type Component = ZdUIComponent
+export type Component = IcsUIComponent
 
 /** Component size definition for button, input, etc */
-export type ComponentSize = ZdUIComponentSize
+export type ComponentSize = IcsUIComponentSize
 
 /** Horizontal alignment */
-export type HorizontalAlignment = ZdUIHorizontalAlignment
+export type HorizontalAlignment = IcsUIHorizontalAlignment
 
 
 /** Demo Component */
-export class Demo extends ZdDemo {}
+export class Demo extends IcsDemo {}

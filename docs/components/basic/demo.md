@@ -3,6 +3,6 @@
 
 ::: demo
 ```html
-<zd-demo></zd-demo>
+<ics-demo></ics-demo>
 ```
 :::
