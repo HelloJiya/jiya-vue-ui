@@ -10,7 +10,8 @@ Object.keys(Components).forEach(function (key) {
 
 externals = [Object.assign({
   vue: 'vue',
-  'element-ui': 'element-ui'
+  'element-ui': 'element-ui',
+  moment: 'moment'
 }, externals), nodeExternals()]
 
 exports.externals = externals
