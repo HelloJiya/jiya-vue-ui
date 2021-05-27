@@ -32,7 +32,9 @@ module.exports = {
           "collapsable": false,
           "children": [
             "basic/demo",
-            "basic/layout"
+            "basic/layout",
+            "basic/table",
+            "basic/search-form"
           ]
         }
       ]

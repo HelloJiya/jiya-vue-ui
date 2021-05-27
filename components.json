@@ -1,4 +1,6 @@
 {
    "demo": "./packages/demo/index.js",
-   "layout": "./packages/layout/index.js"
+   "layout": "./packages/layout/index.js",
+   "table": "./packages/table/index.js",
+   "search-form": "./packages/search-form/index.js"
 }
