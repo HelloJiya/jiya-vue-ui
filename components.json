@@ -1,3 +1,5 @@
 {
-   "demo": "./packages/demo/index.js"
+   "demo": "./packages/demo/index.js",
+   "table": "./packages/table/index.js",
+   "search-form": "./packages/search-form/index.js"
 }

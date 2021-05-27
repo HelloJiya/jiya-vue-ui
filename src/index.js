@@ -1,8 +1,12 @@
 /* */
 import Demo from '../packages/demo/index.js'
+import Table from '../packages/table/index.js'
+import SearchForm from '../packages/search-form/index.js'
 
 const components = [
-  Demo
+  Demo,
+  Table,
+  SearchForm
 ]
 
 const install = function (Vue, opts = {}) {
@@ -18,5 +22,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   version: '0.1.0',
   install,
-  Demo
+  Demo,
+  Table,
+  SearchForm
 }

@@ -31,7 +31,9 @@ module.exports = {
           "title": "基础组件",
           "collapsable": false,
           "children": [
-            "basic/demo"
+            "basic/demo",
+            "basic/table",
+            "basic/search-form"
           ]
         }
       ]
