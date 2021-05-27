@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import { IcsUIComponent, IcsUIComponentSize, IcsUIHorizontalAlignment } from './component'
 import { IcsDemo } from './demo'
+import { IcsLayout } from './layout'
 
 export interface InstallationOptions {
   size: string
@@ -28,3 +29,6 @@ export type HorizontalAlignment = IcsUIHorizontalAlignment
 
 /** Demo Component */
 export class Demo extends IcsDemo {}
+
+/** Layout Component */
+export class Layout extends IcsLayout {}
