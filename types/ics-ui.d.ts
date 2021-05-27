@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import { IcsUIComponent, IcsUIComponentSize, IcsUIHorizontalAlignment } from './component'
 import { IcsDemo } from './demo'
+import { IcsSearchForm } from './search-form'
+import { IcsTable } from './table'
 
 export interface InstallationOptions {
   size: string
@@ -28,3 +30,8 @@ export type HorizontalAlignment = IcsUIHorizontalAlignment
 
 /** Demo Component */
 export class Demo extends IcsDemo {}
+
+/** SearchForm Component */
+export class SearchForm extends IcsSearchForm {}
+/** Table Component */
+export class Table extends IcsTable {}

@@ -64,6 +64,28 @@ $--background-color-base: #F0F2F5 !default;
 -------------------------- */
 $--link-color: $--color-primary-light-2 !default;
 $--link-hover-color: $--color-primary !default;
+/* Link
+--------------------------*/
+/// fontSize||Font|1
+// $--link-font-size: $--font-size-base !default;
+// /// fontWeight||Font|1
+// $--link-font-weight: $--font-weight-primary !default;
+// /// color||Color|0
+$--link-default-font-color: $--color-text-regular !default;
+/// color||Color|0
+$--link-default-active-color: $--color-primary !default;
+/// color||Color|0
+$--link-disabled-font-color: $--color-text-placeholder !default;
+/// color||Color|0
+$--link-primary-font-color: $--color-primary !default;
+/// color||Color|0
+$--link-success-font-color: $--color-success !default;
+/// color||Color|0
+$--link-warning-font-color: $--color-warning !default;
+/// color||Color|0
+$--link-danger-font-color: $--color-danger !default;
+/// color||Color|0
+$--link-info-font-color: $--color-info !default;
 
 /* Border
 -------------------------- */
@@ -137,6 +159,23 @@ $--disabled-border-base: $--border-color-light !default;
 --------------------------*/
 $--scrollbar-background-color: rgba($--color-text-secondary, .3) !default;
 $--scrollbar-hover-background-color: rgba($--color-text-secondary, .5) !default;
+
+
+/*Table
+--------------------------*/
+/// color||Color|0
+$--table-border-color: $--border-color-lighter !default;
+$--table-border: 1px solid $--table-border-color !default;
+/// color||Color|0
+$--table-font-color: $--color-text-regular !default;
+/// color||Color|0
+$--table-header-font-color: $--color-text-regular !default;
+/// color||Color|0
+$--table-row-hover-background-color: #F9FAFF !default;
+$--table-current-row-background-color: $--color-primary-light-9 !default;
+/// color||Color|0
+$--table-header-background-color: #F7F7FB !default;
+$--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
 
 /* Break-point
 --------------------------*/
