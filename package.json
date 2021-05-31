@@ -16,7 +16,7 @@
     "clean": "rimraf lib && rimraf packages/*/lib && rimraf tests/**/coverage",
     "lint": "vue-cli-service lint src/* packages/* tests/*",
     "test": "npm run lint && npm run build:theme && npm run build:file && cross-env CI_ENV=/dev/ BABEL_ENV=test karma start tests/unit/karma.conf.js --single-run",
-    "pub": "npm publish",
+    "pub": "npm run dist && npm publish",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0"
   },
   "main": "lib/ics-ui.common.js",
