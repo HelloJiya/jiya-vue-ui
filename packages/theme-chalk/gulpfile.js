@@ -4,6 +4,7 @@ const { series, src, dest } = require('gulp')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
 const cssmin = require('gulp-cssmin')
+const concat = require('gulp-concat')
 
 function compile () {
   return src('./src/*.scss')
@@ -22,4 +23,15 @@ function copyfont () {
     .pipe(dest('./lib/fonts'))
 }
 
-exports.build = series(compile, copyfont)
+function copyElement () {
+  return src('./src/element.css')
+    .pipe(dest('./lib'))
+}
+
+function concatElement () {
+  return src(['./src/element.css', './lib/index.css'])
+    .pipe(concat('index.css'))
+    .pipe(dest('./lib'))
+}
+
+exports.build = series(compile, copyfont, copyElement, concatElement)
