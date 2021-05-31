@@ -1,10 +1,14 @@
 /* */
 import Demo from '../packages/demo/index.js'
 import Layout from '../packages/layout/index.js'
+import Table from '../packages/table/index.js'
+import SearchForm from '../packages/search-form/index.js'
 
 const components = [
   Demo,
-  Layout
+  Layout,
+  Table,
+  SearchForm
 ]
 
 const install = function (Vue, opts = {}) {
@@ -21,5 +25,7 @@ export default {
   version: '0.1.0',
   install,
   Demo,
-  Layout
+  Layout,
+  Table,
+  SearchForm
 }
