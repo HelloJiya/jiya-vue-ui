@@ -1,0 +1,27 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(search-form) {
+  display: flex;
+  @include e(wrap){
+    flex: 1 0 ;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include e(item){
+    flex: 0 0 22%;
+    max-width: 22%;
+    padding-right: 10px;
+    box-sizing: border-box;
+    .el-select,.el-date-editor{
+      width: 100%;
+    }
+  }
+
+  @include e(action){
+    text-align: right;
+    width: 200px;
+    margin-left: 20px;
+  }
+}

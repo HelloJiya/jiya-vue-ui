@@ -1,0 +1,57 @@
+@import "mixins/mixins";
+@import "common/var";
+
+$typeMap: (
+  primary: $--link-primary-font-color, 
+  danger: $--link-danger-font-color, 
+  success: $--link-success-font-color, 
+  warning: $--link-warning-font-color, 
+  info: $--link-info-font-color
+);
+
+@include b(table) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  // clear vuepress default table styles
+  table{
+    margin:0;
+  }
+
+  @include e(search){
+    width: 100%;
+  }
+
+  @include e(toolbar){
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include m(action){
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
+
+  @include e(content) {
+    flex: auto;
+    min-height: 0;
+    @each $type, $primaryColor in $typeMap {
+      .is-#{$type}{
+        color: $primaryColor ;
+      }
+    }
+  }
+
+  @include e(pagination){
+    padding: 40px 0 20px ;
+    text-align: right;
+    @include when(center){
+      text-align: center;
+    }
+    @include when(left){
+      text-align: left;
+    }
+  }
+}
