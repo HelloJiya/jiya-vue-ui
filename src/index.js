@@ -1,8 +1,10 @@
 /* */
 import Demo from '../packages/demo/index.js'
+import Layout from '../packages/layout/index.js'
 
 const components = [
-  Demo
+  Demo,
+  Layout
 ]
 
 const install = function (Vue, opts = {}) {
@@ -18,5 +20,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   version: '0.1.0',
   install,
-  Demo
+  Demo,
+  Layout
 }
